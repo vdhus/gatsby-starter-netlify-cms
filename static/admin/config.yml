@@ -6,6 +6,17 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "works"
+    label: "Works"
+    folder: "src/pages/works"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "work"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "date", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+     
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
